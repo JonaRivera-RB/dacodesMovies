@@ -8,11 +8,12 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class MovieCell: UICollectionViewCell {
     
     //MARK:-Properties
-    var movieModel: MoviewModel? {
+    var movieModel: MovieModel? {
         didSet {
             configure()
         }
@@ -21,7 +22,7 @@ class MovieCell: UICollectionViewCell {
     private lazy var movieImageView: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .blue
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
         image.layer.cornerRadius = 20
         
@@ -70,7 +71,7 @@ class MovieCell: UICollectionViewCell {
         
         addSubview(movieImageView)
         
-        movieImageView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingLeft: 5, paddingRight: 5)
+        movieImageView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 10, paddingLeft: 5, paddingRight: 5)
         
         movieImageView.addSubview(shadowView)
         
@@ -99,6 +100,7 @@ class MovieCell: UICollectionViewCell {
         guard let movieModel = movieModel else { return }
         
         let viewModel = MoviewViewModel(movieModel: movieModel)
+        movieImageView.sd_setImage(with: viewModel.imageMoviewURL, completed: nil)
         
         movieNameLabel.text = movieModel.title
         releaseDateLabel.text = movieModel.release_date

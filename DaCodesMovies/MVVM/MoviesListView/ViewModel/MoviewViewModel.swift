@@ -9,9 +9,9 @@ import Foundation
 
 class MoviewViewModel {
     
-    var movieModel: MoviewModel
+    var movieModel: MovieModel
     
-    init(movieModel: MoviewModel) {
+    init(movieModel: MovieModel) {
         self.movieModel = movieModel
     }
     
@@ -25,7 +25,7 @@ class MoviewViewModel {
     
     func retriveDataList() {
         
-        WebService.shared.load(resource: MoviewModel.allMoviews) { [weak self] result in
+        WebService.shared.load(resource: MovieModel.allMoviews) { [weak self] result in
             switch result {
             case .success(let response):
                 self?.moviesArray = response
@@ -37,5 +37,9 @@ class MoviewViewModel {
     
     var voteAverageString: String {
         return "\(movieModel.vote_average ?? 0.0)"
+    }
+    
+    var imageMoviewURL: URL? {
+        return URL(string:  Constants.IMAGE_URL + movieModel.poster_path)
     }
 }

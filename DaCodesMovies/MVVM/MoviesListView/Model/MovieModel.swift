@@ -8,14 +8,15 @@
 import Foundation
 
 struct MoviewModelResponse: Codable {
-    var results = [MoviewModel]()
+    var results = [MovieModel]()
     var page: Int?
 }
 
-struct MoviewModel: Codable {
+struct MovieModel: Codable {
     var title: String = ""
     var vote_average: Double?
     var release_date: String?
+    var poster_path: String = ""
 }
 
 struct DatesResponse: Codable{
@@ -23,7 +24,7 @@ struct DatesResponse: Codable{
     var minimum: String?
 }
 
-extension MoviewModel {
+extension MovieModel {
     static var allMoviews: Resource<MoviewModelResponse> = {
         
         var page = 1

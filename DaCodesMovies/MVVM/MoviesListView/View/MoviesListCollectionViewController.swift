@@ -12,7 +12,7 @@ private let REUSE_IDENTIFIER = "moviewIdentifier"
 class MoviesListCollectionViewController: UICollectionViewController {
     
     //MARK: -Properties
-    private var moviesViewModel = MoviewViewModel(movieModel: MoviewModel())
+    private var moviesViewModel = MoviewViewModel(movieModel: MovieModel())
     
     //MARK: - Lifecycle
     
@@ -20,9 +20,8 @@ class MoviesListCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         configureCollectionView()
-        configureNavigationController()
         
-        configureNavigationBar(largeTitleColor: .blue, backgoundColor: .white, tintColor: .blue, title: "DaCodeMovies", preferredLargeTitle: true)
+        configureNavigationBar(largeTitleColor: .blue, backgoundColor: .white, tintColor: .blue, title: AppConstants.navigationTitleHome, preferredLargeTitle: true)
         
         moviesViewModel.retriveDataList()
         bind()
@@ -42,12 +41,6 @@ class MoviesListCollectionViewController: UICollectionViewController {
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
-    }
-    
-    private func configureNavigationController() {
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.title = "DaCodesMovies"
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func bind() {
@@ -77,12 +70,13 @@ extension  MoviesListCollectionViewController {
 extension MoviesListCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let nbCol = 2
+        let columns = 2
         
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { fatalError() }
         
-        let totalSpace = flowLayout.sectionInset.left + flowLayout.sectionInset.right + (flowLayout.minimumInteritemSpacing * CGFloat(nbCol - 1))
-        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(nbCol))
+        let totalSpace = flowLayout.sectionInset.left + flowLayout.sectionInset.right + (flowLayout.minimumInteritemSpacing * CGFloat(columns - 1))
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(columns))
+        
         return CGSize(width: size, height: 300)
     }
     
