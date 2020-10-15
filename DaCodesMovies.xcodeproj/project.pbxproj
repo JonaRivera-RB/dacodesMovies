@@ -16,6 +16,7 @@
 		136CFB202538379300343759 /* DaCodesMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136CFB1F2538379300343759 /* DaCodesMoviesUITests.swift */; };
 		136CFB4325383BDD00343759 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136CFB4225383BDC00343759 /* MovieCell.swift */; };
 		136CFB4825383D6200343759 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136CFB4725383D6200343759 /* Extensions.swift */; };
+		136CFB5E2538469A00343759 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136CFB5D2538469A00343759 /* WebServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		136CFB212538379300343759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		136CFB4225383BDC00343759 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		136CFB4725383D6200343759 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		136CFB5D2538469A00343759 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		136CFAF12538379100343759 = {
 			isa = PBXGroup;
 			children = (
+				136CFB5C2538468E00343759 /* WebServices */,
 				136CFAFC2538379100343759 /* DaCodesMovies */,
 				136CFB132538379300343759 /* DaCodesMoviesTests */,
 				136CFB1E2538379300343759 /* DaCodesMoviesUITests */,
@@ -177,6 +180,14 @@
 				136CFB3725383A5600343759 /* ViewModel */,
 			);
 			path = MoviesListView;
+			sourceTree = "<group>";
+		};
+		136CFB5C2538468E00343759 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				136CFB5D2538469A00343759 /* WebServices.swift */,
+			);
+			path = WebServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 			files = (
 				136CFB4825383D6200343759 /* Extensions.swift in Sources */,
 				136CFB022538379100343759 /* MoviesListCollectionViewController.swift in Sources */,
+				136CFB5E2538469A00343759 /* WebServices.swift in Sources */,
 				136CFAFE2538379100343759 /* AppDelegate.swift in Sources */,
 				136CFB4325383BDD00343759 /* MovieCell.swift in Sources */,
 				136CFB002538379100343759 /* SceneDelegate.swift in Sources */,
