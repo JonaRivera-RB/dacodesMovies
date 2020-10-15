@@ -10,6 +10,7 @@ import Foundation
 class MoviewViewModel {
     
     var movieModel: MovieModel
+    var page: Int = 1
     
     init(movieModel: MovieModel) {
         self.movieModel = movieModel
@@ -19,18 +20,15 @@ class MoviewViewModel {
     
     var moviesArray: MoviewModelResponse = MoviewModelResponse() {
         didSet {
+            self.moviesArray.results += oldValue.results
             refreshData()
         }
     }
     
     func retriveDataList() {
-        
-        WebService.shared.load(resource: MovieModel.allMoviews) { [weak self] result in
-            switch result {
-            case .success(let response):
-                self?.moviesArray = response
-            case .failure(let error):
-                print(error)
+        WebServices.shared.getAllMovies(page: page) { moviewModelResponse, _ in
+            if let moviewModelResponse = moviewModelResponse {
+                self.moviesArray = moviewModelResponse
             }
         }
     }
@@ -42,4 +40,15 @@ class MoviewViewModel {
     var imageMoviewURL: URL? {
         return URL(string:  Constants.IMAGE_URL + movieModel.poster_path)
     }
+    
+    var nextPageIsEnabled: Bool {
+        var currentPage = page
+        if currentPage < (moviesArray.total_pages ?? 0) + 1 {
+            currentPage = currentPage + 1
+            self.page = currentPage
+            return true
+        }
+        return false
+    }
+    
 }

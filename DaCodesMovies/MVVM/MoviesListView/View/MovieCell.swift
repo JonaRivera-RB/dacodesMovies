@@ -48,7 +48,6 @@ class MovieCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.textColor = .white
-        label.text = "20 enero 1998"
         label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 1
         return label
@@ -58,7 +57,6 @@ class MovieCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.textColor = .white
-        label.text = "5.0"
         label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 1
         return label
