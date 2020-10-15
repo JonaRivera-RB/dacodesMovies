@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "92E42F08-95B5-4CA1-8DEF-06EB30A56E5F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E430AA8-40C7-4515-B335-20B1B4C6577B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/WebServices/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "load(resource:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F4246A9-6041-483C-AA41-81DE5A3383F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/WebServices/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "load(resource:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4ABB0389-2892-44B9-9853-324714D855EC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/WebServices/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "load(resource:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FE44453-4ACF-4EC0-94EF-276D60C1AC73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/WebServices/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "load(resource:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "628E9F96-2009-4DD2-98DD-C5034823B492"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/WebServices/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "load(resource:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "628E9F96-2009-4DD2-98DD-C5034823B492 - 6f14ab889af4c216"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DaCodesMovies.WebService.load&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(resource: DaCodesMovies.Resource&lt;A&gt;, completion: (Swift.Result&lt;A, DaCodesMovies.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DaCodesMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/Exam/DaCodesMovies/DaCodesMovies/WebServices/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1331">
+               </Location>
+               <Location
+                  uuid = "628E9F96-2009-4DD2-98DD-C5034823B492 - eb7acd9a8778aec8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DaCodesMovies.WebService.load&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(resource: DaCodesMovies.Resource&lt;A&gt;, completion: (Swift.Result&lt;A, DaCodesMovies.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DaCodesMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/Exam/DaCodesMovies/DaCodesMovies/WebServices/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "165">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21F44957-BAC6-4CC5-86B3-81FB304DEF20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/WebServices/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "load(resource:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3624622C-73D1-4599-AAEF-D355CA3457DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "bind()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "484E7A2C-26BC-44F4-BEBD-A73B831D2C85"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/MVVM/MoviesListView/ViewModel/MoviewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "retriveDataList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "042F8E28-31A6-4881-BD9D-9B9D9F37D8FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/MVVM/MoviesListView/ViewModel/MoviewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "retriveDataList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09F71B7D-C8B4-47BE-99C7-B5AA065EDEB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "535D86B8-6889-4556-8E54-713493AA3506"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "bind()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "535D86B8-6889-4556-8E54-713493AA3506 - 5011bfb2c9dfdfd8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in DaCodesMovies.MoviesListCollectionViewController.(bind in _84617E64BB48FB130B80E8F8D703076D)() -&gt; ()"
+                  moduleName = "DaCodesMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/Exam/DaCodesMovies/DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "535D86B8-6889-4556-8E54-713493AA3506 - 9d88435cd900c09c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in DaCodesMovies.MoviesListCollectionViewController.(bind in _84617E64BB48FB130B80E8F8D703076D)() -&gt; ()"
+                  moduleName = "DaCodesMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/Exam/DaCodesMovies/DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5D46435-7180-4124-8055-57063FA4EBAA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "bind()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5D46435-7180-4124-8055-57063FA4EBAA - 3ab8abc384c9b626"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DaCodesMovies.MoviesListCollectionViewController.(bind in _84617E64BB48FB130B80E8F8D703076D)() -&gt; ()"
+                  moduleName = "DaCodesMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/Exam/DaCodesMovies/DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "E5D46435-7180-4124-8055-57063FA4EBAA - 5011bfb2c9dfdfb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in DaCodesMovies.MoviesListCollectionViewController.(bind in _84617E64BB48FB130B80E8F8D703076D)() -&gt; ()"
+                  moduleName = "DaCodesMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/Exam/DaCodesMovies/DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  uuid = "E5D46435-7180-4124-8055-57063FA4EBAA - 9d88435cd900c09c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in DaCodesMovies.MoviesListCollectionViewController.(bind in _84617E64BB48FB130B80E8F8D703076D)() -&gt; ()"
+                  moduleName = "DaCodesMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/Exam/DaCodesMovies/DaCodesMovies/MVVM/MoviesListView/View/MoviesListCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
