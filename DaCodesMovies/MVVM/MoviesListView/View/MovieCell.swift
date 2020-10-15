@@ -12,7 +12,13 @@ import UIKit
 class MovieCell: UICollectionViewCell {
     
     //MARK:-Properties
-    private lazy var moviewImageView: UIImageView = {
+    var movieModel: MoviewModel? {
+        didSet {
+            configure()
+        }
+    }
+    
+    private lazy var movieImageView: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .blue
         image.contentMode = .scaleAspectFit
@@ -24,15 +30,14 @@ class MovieCell: UICollectionViewCell {
     
     private var shadowView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         return view
     }()
     
-    private var moviewNameLabel: UILabel = {
+    private var movieNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textColor = .white
-        label.text = "Terminator destino oscuro"
         label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 2
         return label
@@ -63,17 +68,17 @@ class MovieCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubview(moviewImageView)
+        addSubview(movieImageView)
         
-        moviewImageView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingLeft: 5, paddingRight: 5)
+        movieImageView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingLeft: 5, paddingRight: 5)
         
-        moviewImageView.addSubview(shadowView)
+        movieImageView.addSubview(shadowView)
         
-        shadowView.anchor(left: moviewImageView.leftAnchor, bottom: moviewImageView.bottomAnchor, right: moviewImageView.rightAnchor, height: 80)
+        shadowView.anchor(left: movieImageView.leftAnchor, bottom: movieImageView.bottomAnchor, right: movieImageView.rightAnchor, height: 80)
         
-        shadowView.addSubview(moviewNameLabel)
+        shadowView.addSubview(movieNameLabel)
         
-        moviewNameLabel.anchor(top: shadowView.topAnchor, left: shadowView.leftAnchor, right: shadowView.rightAnchor, paddingTop: 5, paddingLeft: 10, paddingRight: 10)
+        movieNameLabel.anchor(top: shadowView.topAnchor, left: shadowView.leftAnchor, right: shadowView.rightAnchor, paddingTop: 5, paddingLeft: 10, paddingRight: 10)
         
         let stack = UIStackView(arrangedSubviews: [releaseDateLabel, raitingLabel])
         stack.axis = .horizontal
@@ -81,11 +86,22 @@ class MovieCell: UICollectionViewCell {
         stack.distribution = .equalSpacing
         
         shadowView.addSubview(stack)
-        stack.anchor(top: moviewNameLabel.bottomAnchor, left: shadowView.leftAnchor, bottom: shadowView.bottomAnchor, right: shadowView.rightAnchor, paddingTop: 2, paddingLeft: 10, paddingBottom: 7, paddingRight: 10)
+        stack.anchor(top: movieNameLabel.bottomAnchor, left: shadowView.leftAnchor, bottom: shadowView.bottomAnchor, right: shadowView.rightAnchor, paddingTop: 2, paddingLeft: 10, paddingBottom: 7, paddingRight: 10)
         
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Helpers
+    private func configure() {
+        guard let movieModel = movieModel else { return }
+        
+        let viewModel = MoviewViewModel(movieModel: movieModel)
+        
+        movieNameLabel.text = movieModel.title
+        releaseDateLabel.text = movieModel.release_date
+        raitingLabel.text = viewModel.voteAverageString
     }
 }

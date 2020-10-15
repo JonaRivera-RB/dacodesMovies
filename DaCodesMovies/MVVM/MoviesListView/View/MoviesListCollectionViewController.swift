@@ -11,21 +11,29 @@ import UIKit
 private let REUSE_IDENTIFIER = "moviewIdentifier"
 class MoviesListCollectionViewController: UICollectionViewController {
     
+    //MARK: -Properties
+    private var moviesViewModel = MoviewViewModel(movieModel: MoviewModel())
+    
     //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureCollectionView()
         configureNavigationController()
+        
+        configureNavigationBar(largeTitleColor: .blue, backgoundColor: .white, tintColor: .blue, title: "DaCodeMovies", preferredLargeTitle: true)
+        
+        moviesViewModel.retriveDataList()
+        bind()
     }
     
-    // initialized with a non-nil layout parameter
-      init() {
-          super.init(collectionViewLayout: UICollectionViewFlowLayout())
-      }
-      required init?(coder: NSCoder) {
-          fatalError("init(coder:) has not been implemented")
-      }
+    init() {
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - Helpers
     private func configureCollectionView() {
@@ -41,17 +49,26 @@ class MoviesListCollectionViewController: UICollectionViewController {
         navigationController?.title = "DaCodesMovies"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
+    private func bind() {
+        moviesViewModel.refreshData = { [weak self] () in
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
+    }
 }
 
 //MARK: - DataSource
 extension  MoviesListCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return moviesViewModel.moviesArray.results.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: REUSE_IDENTIFIER, for: indexPath) as? MovieCell else { fatalError() }
         
+        cell.movieModel = moviesViewModel.moviesArray.results[indexPath.row]
         return cell
     }
 }
