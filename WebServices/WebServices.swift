@@ -30,7 +30,7 @@ extension Resource {
     }
 }
 
-class WebService {
+struct WebService {
     
     static let shared = WebService()
     
