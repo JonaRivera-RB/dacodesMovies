@@ -64,6 +64,21 @@ extension  MoviesListCollectionViewController {
         cell.movieModel = moviesViewModel.moviesArray.results[indexPath.row]
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = DetailMovieViewController(movieID: String(moviesViewModel.moviesArray.results[indexPath.row].id))
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if indexPath.row == moviesViewModel.moviesArray.results.count - 1 &&  moviesViewModel.moviesArray.results.count < moviesViewModel.moviesArray.total_results ?? 0 {
+            if moviesViewModel.nextPageIsEnabled {
+                moviesViewModel.retriveDataList()
+                bind()
+            }
+        }
+    }
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout

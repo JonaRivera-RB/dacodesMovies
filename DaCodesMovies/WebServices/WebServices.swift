@@ -7,56 +7,44 @@
 
 import Foundation
 
-enum NetworkError: Error {
-    case decodingError
-    case domainError
-    case urlError
-}
-
-enum httpMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
-
-struct Resource<T: Codable> {
-    let url: URL
-    var httpMethod: httpMethod = .get
-    var body: Data? = nil
-}
-
-extension Resource {
-    init(url: URL) {
-        self.url = url
-    }
-}
-
-struct WebService {
+struct WebServices {
+    static let shared = WebServices()
     
-    static let shared = WebService()
+    let getRequest = GetDataHttp()
     
-    func load<T>(resource: Resource<T>, completion: @escaping(Result<T, NetworkError>) -> Void ) {
-        
-        var request = URLRequest(url: resource.url)
-        request.httpMethod = resource.httpMethod.rawValue
-        request.httpBody = resource.body
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            guard let data = data, error == nil else {
-                completion(.failure(.domainError))
-                return
-            }
-            
-            let result = try? JSONDecoder().decode(T.self, from: data)
-            if let result = result {
-                DispatchQueue.main.async {
-                    completion(.success(result))
+    func getAllMovies(page: Int?, _ completion: @escaping (_ moviewModelResponse: MoviewModelResponse?, _ error: Error?) -> () ) {
+        getRequest.url = URL(string: "\(Constants.URL)?api_key=\(Constants.API_KEY)&language=es-MX&page=\(page ?? 1)")
+        getRequest.header = false
+        getRequest.forData { (data, error, success) in
+            if success {
+                if let data = data, let movieModelResponse = DataFetcher<MoviewModelResponse>().getData(data: data) {
+                    completion(movieModelResponse, nil)
+                    return
                 }
             }else {
-                completion(.failure(.decodingError))
+                completion(nil, error)
+                return
             }
-        }.resume()
+            completion(nil, error)
+        }
     }
     
+    func getDetailOfMoview(movieID: String, _ completion: @escaping (_ detailMovieModel: DetailMovieModel?, _ error: Error?) -> () ) {
+        
+        getRequest.url = URL(string: "\(Constants.URL_DETAIL)\(movieID)?api_key=\(Constants.API_KEY)&language=es-MX")
+        getRequest.header = false
+        getRequest.forData { (data, error, success) in
+            if success {
+                if let data = data, let detailMoviewModel = DataFetcher<DetailMovieModel>().getData(data: data) {
+                    completion(detailMoviewModel, nil)
+                    return
+                }
+            }else {
+                completion(nil, error)
+                return
+            }
+            completion(nil, error)
+        }
+        
+    }
 }
